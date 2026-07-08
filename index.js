@@ -45,4 +45,12 @@ for (let i = 1; i < numbers.length; i++) {
     k++;
   }
 }
-document.write(numbers);
+// document.write(numbers);
+
+const name1 = "listen";
+const name2 = "silent";
+const result1 = name2.split("").sort().join("");
+const result = name1.split("").sort().join("");
+if (result === result1) {
+  console.log("Anagram");
+}
