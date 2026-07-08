@@ -47,6 +47,7 @@ for (let i = 1; i < numbers.length; i++) {
 }
 // document.write(numbers);
 
+//anagram
 const name1 = "listen";
 const name2 = "silent";
 const result1 = name2.split("").sort().join("");
@@ -54,3 +55,24 @@ const result = name1.split("").sort().join("");
 if (result === result1) {
   console.log("Anagram");
 }
+
+//ransome note
+const ransomNote = "a";
+const magazine = "b";
+
+var canConstruct = function (ransomNote, magazine) {
+  let count = {};
+  for (let i = 0; i < magazine.length; i++) {
+    const ch = magazine[i];
+    count[ch] = (count[ch] || 0) + 1;
+  }
+  for (let i = 0; i < ransomNote.length; i++) {
+    const ch = ransomNote[i];
+    if (!count[ch]) {
+      return false;
+    }
+    count[ch]--;
+  }
+  return true;
+};
+console.log(canConstruct(ransomNote, magazine));
